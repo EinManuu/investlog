@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung – InvestLog</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0b0d11; --surface: #13161d; --border: #1e2230;
+    --gold: #c9a84c; --text: #e8e9ec; --muted: #6b7080;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.8; }
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 2rem; border-bottom: 1px solid var(--border);
+    background: rgba(11,13,17,0.95);
+  }
+  .nav-logo { font-family: var(--serif); font-size: 1.25rem; color: var(--gold); text-decoration: none; }
+  .nav-back { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+  .nav-back:hover { color: var(--text); }
+  main { max-width: 720px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .page-label {
+    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; display: block;
+  }
+  h1 { font-family: var(--serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem; }
+  .last-updated { font-size: 0.8rem; color: var(--muted); margin-bottom: 3rem; }
+  h2 {
+    font-size: 1rem; font-weight: 500; color: var(--gold);
+    margin: 2.5rem 0 0.75rem; letter-spacing: 0.03em;
+    text-transform: uppercase; font-size: 0.8rem;
+  }
+  p { color: #b0b4c0; margin-bottom: 1rem; }
+  ul { color: #b0b4c0; padding-left: 1.5rem; margin-bottom: 1rem; }
+  ul li { margin-bottom: 0.4rem; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem 1.75rem; margin: 2rem 0;
+  }
+  .card p { margin: 0; }
+  footer {
+    border-top: 1px solid var(--border); padding: 2rem;
+    text-align: center; font-size: 0.8rem; color: var(--muted);
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+  @media (max-width: 600px) { main { padding: 2.5rem 1.25rem 4rem; } nav { padding: 1rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">InvestLog</a>
+  <a href="index.html" class="nav-back">← Zurück zur Startseite</a>
+</nav>
+
+<main>
+  <span class="page-label">Rechtliches</span>
+  <h1>Datenschutzerklärung</h1>
+  <p class="last-updated">Zuletzt aktualisiert: Juni 2025</p>
+
+  <div class="card">
+    <p>InvestLog ist eine private, nicht-kommerzielle Anwendung. Es werden keine Daten verkauft, kein Tracking durchgeführt und keine Werbung geschaltet.</p>
+  </div>
+
+  <h2>1. Verantwortlicher</h2>
+  <p>Diese Anwendung wird privat betrieben von:</p>
+  <p>EinManuu<br>Österreich<br>Kontakt: über GitHub (<a href="https://github.com/EinManuu" style="color:var(--gold)">github.com/EinManuu</a>)</p>
+
+  <h2>2. Welche Daten werden verarbeitet</h2>
+  <p>InvestLog verarbeitet ausschließlich Daten, die du selbst eingibst:</p>
+  <ul>
+    <li>Google-Kontodaten (Name, E-Mail-Adresse) zur Authentifizierung via Google Sign-In</li>
+    <li>Von dir erfasste Investmenttransaktionen (Wertpapier, Kurs, Stückzahl, Datum, Gebühren)</li>
+  </ul>
+  <p>Es werden keine weiteren personenbezogenen Daten erhoben.</p>
+
+  <h2>3. Zweck der Datenverarbeitung</h2>
+  <p>Die erhobenen Daten dienen ausschließlich dem Betrieb der App:</p>
+  <ul>
+    <li>Google-Anmeldedaten zur eindeutigen Identifikation deines Accounts</li>
+    <li>Transaktionsdaten zur Darstellung deines Portfolios und der Steuerberechnung</li>
+  </ul>
+
+  <h2>4. Datenspeicherung und Verschlüsselung</h2>
+  <p>Alle Transaktionsdaten werden verschlüsselt in Google Firestore gespeichert. Die Verschlüsselung erfolgt mit AES-256-GCM. Schlüsselverwaltung läuft über Google Cloud KMS (Key Ring: <code style="color:var(--gold);font-size:0.85em">investlog-keyring</code>, Region: europe-west3).</p>
+  <p>Google selbst verarbeitet Daten gemäß der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--gold)">Google-Datenschutzerklärung</a>.</p>
+
+  <h2>5. Weitergabe an Dritte</h2>
+  <p>Es erfolgt keine Weitergabe deiner Daten an Dritte. Die App nutzt folgende externe Dienste ausschließlich für ihren Betrieb:</p>
+  <ul>
+    <li>Google Firebase / Firestore (Datenspeicherung)</li>
+    <li>Google Sign-In (Authentifizierung)</li>
+    <li>Google Cloud KMS (Schlüsselverwaltung)</li>
+    <li>Yahoo Finance API (Kursdaten-Suche, keine persönlichen Daten übermittelt)</li>
+    <li>Financial Modeling Prep API (ETF-Sektordaten, keine persönlichen Daten übermittelt)</li>
+  </ul>
+
+  <h2>6. Dauer der Speicherung</h2>
+  <p>Deine Daten werden so lange gespeichert, wie dein Account aktiv ist. Du kannst jederzeit die Löschung deiner Daten verlangen.</p>
+
+  <h2>7. Deine Rechte (DSGVO)</h2>
+  <p>Als betroffene Person hast du folgende Rechte:</p>
+  <ul>
+    <li>Auskunft über gespeicherte Daten (Art. 15 DSGVO)</li>
+    <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+    <li>Löschung deiner Daten (Art. 17 DSGVO)</li>
+    <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+    <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+    <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+  </ul>
+  <p>Zur Ausübung deiner Rechte wende dich über GitHub an den Betreiber.</p>
+
+  <h2>8. Beschwerderecht</h2>
+  <p>Du hast das Recht, bei der österreichischen Datenschutzbehörde (DSB) Beschwerde einzulegen: <a href="https://www.dsb.gv.at" target="_blank" rel="noopener" style="color:var(--gold)">www.dsb.gv.at</a></p>
+
+  <h2>9. Cookies und Tracking</h2>
+  <p>Diese App und Website verwenden keine Cookies, kein Analytics und kein Tracking.</p>
+</main>
+
+<footer>
+  <span>© 2025 EinManuu · InvestLog</span>
+  <a href="index.html">Startseite</a>
+  <a href="terms.html">Nutzungsbedingungen</a>
+</footer>
+
+</body>
+</html>
